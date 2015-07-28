@@ -21,7 +21,7 @@ def getSensorData():
     temp = temp[1]
     gyro_x, gyro_y, gyro_z = gyro[2],gyro[3],gyro[4]
 
-    return(acc_x,acc_y,acc_z,temp,gyro_x,gyro_y,gyro_z)
+    return(float(acc_x),float(acc_y),float(acc_z),float(temp),float(gyro_x),float(gyro_y),float(gyro_z))
 
 def main():
     print('starting...')

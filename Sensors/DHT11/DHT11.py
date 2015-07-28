@@ -9,11 +9,11 @@ def getSensorData():
     print('*DHT11*')
     input1 = serialFromArduino.readline()
     print(input1)
-    tem = input1.replace("temperature:","")
+    tem = input1.split()[1]
     input2 = serialFromArduino.readline()
     print(input2)
-    hum = input2.replace("humidity:","")
-    return (tem, hum)
+    hum = input2.split()[1]
+    return (float(tem), float(hum))
 
 def main():
     print('starting...')

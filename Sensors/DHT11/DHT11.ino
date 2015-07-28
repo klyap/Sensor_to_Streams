@@ -16,9 +16,9 @@ void loop()
   if((err=dht11.read(humi, temp))==0)
   {
     Serial.println("*DHT11*");
-    Serial.print("temperature:");
+    Serial.print("temperature: ");
     Serial.println(temp);
-    Serial.print("humidity:");
+    Serial.print("humidity: ");
     Serial.println(humi);
   }
   else
@@ -28,7 +28,7 @@ void loop()
     Serial.print(err);
     Serial.println();    
   }
-  delay(DHT11_RETRY_DELAY); //delay for reread
+  delay(1000); //delay for reread
 }
 
 
